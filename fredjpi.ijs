@@ -7,7 +7,7 @@ install_jexpat_''
 coinsert 'jexpat'
 
 
-APIKEY=: 'a167f84b32adacebe5fd055960294a6b'
+APIKEY=: 
 
 
 NB. params(series_id(required), file_type='json', observation_start='1776-07-04', observation_end='9999-12-31', limit=100000, offset=0, sort_order='asc', units='lin', 
