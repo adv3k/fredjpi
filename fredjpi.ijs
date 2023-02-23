@@ -5,10 +5,13 @@ NB. expat docs https://github.com/jsoftware/api_expat
 require 'api/expat'
 coinsert 'jexpat'
 
-NB. figure out how to work env variable
-APIKEY=:
 
-NB. for creating url w/ params
+NB. figure out how to work env variable
+APIKEY=:'a167f84b32adacebe5fd055960294a6b'
+
+NB. create modules (split up into files), get multiple series in one call, start stats/lin reg package w/ json
+
+
 url=: monad define
 NB. **only required parameter is series id, can be found when searching through the FRED series database (typically next to name of series)
 NB. default param definitions
@@ -69,8 +72,9 @@ NB. params (series id**, file type, start, end, limit, offset, sort order, units
 getseriesobs=: monad define
 NB.retrieves file data
 data=: gethttp url y
-NB.below needs to be in an if statement to allow for xml or json
-if. 'json'-:ftype
+
+NB. if json matches(-:) file type param 
+if. 'json'-:>1{y
   do.
     NB.decodes json data into boxed array, giving: 13 2$ of json data, last row is observations
     jsondata=:dec_pjson_ data
@@ -78,8 +82,9 @@ if. 'json'-:ftype
     lbldateval=:2}. each > 1{ {:jsondata
 NB.
     dateval=:1{"1 > lbldateval
-    jsondata
-elseif. 'xml'-:ftype
+    dateval
+NB. if xml matches (-:) file type param
+elseif. 'xml'-:>1{y
   do.
 NB. need to parse the xml
     data
