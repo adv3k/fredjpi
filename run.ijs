@@ -1,5 +1,5 @@
-require 'c:/users/bplec/j903-user/projects/genericfredjpi/fredjpi.ijs'
-require 'c:/users/bplec/j903-user/projects/genericfredjpi/stats.ijs'
+require 'fredjpi.ijs'
+require 'stats.ijs'
 require'plot'
 require'debug/dissect'
 
