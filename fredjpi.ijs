@@ -9,7 +9,7 @@ require 'c:/users/bplec/j903-user/projects/genericfredjpi/parse.ijs'
 
 
 NB. figure out how to work env variable
-APIKEY=:'a167f84b32adacebe5fd055960294a6b'
+APIKEY=:
 NB. create modules (split up into files), get multiple series in one call, start stats/lin reg package w/ json
 
 NB. params (series id**, file type, start, end, limit, offset, sort order, units, frequency
