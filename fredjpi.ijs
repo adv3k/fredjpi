@@ -4,8 +4,8 @@ require 'tables/dsv'
 NB. expat docs https://github.com/jsoftware/api_expat
 require 'api/expat'
 coinsert 'jexpat'
-require 'c:/users/bplec/j903-user/projects/genericfredjpi/crurl.ijs'
-require 'c:/users/bplec/j903-user/projects/genericfredjpi/parse.ijs'
+require 'crurl.ijs'
+require 'parse.ijs'
 
 
 NB. figure out how to work env variable
