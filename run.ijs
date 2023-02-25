@@ -11,5 +11,5 @@ NB.2 \ >1{"1 test
 NB.datatype each >1{"1 test
 NB.numdata=:2 [\ makenum 1{"1 test
 
-pctchg test
-
+yh=:y_hat test
+yh
