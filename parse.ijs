@@ -13,6 +13,9 @@ if. 'json'-:x
     NB. unboxes and looks vertical
     dateval=:1{"1 > lbldv
     dateval
+
+NB. DO : UNBOX ALL THE WAY AND MAKENUM ON VALUES
+
 NB. if xml matches (-:) file type param
 elseif. 'xml'-:x
   do.
