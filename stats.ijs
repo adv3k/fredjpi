@@ -5,7 +5,7 @@ chg=: 4 : 0
 
 NB. percent change between data points
 NB. returns array of percentage points
-NB. figure out how _ ".S:0 shit works
+NB. figure out how _ ".S:0 works
 pctchg=: monad define
 2 chg/\ _ ".S:0 {:"1 y
 )
