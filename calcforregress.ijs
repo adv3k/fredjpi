@@ -5,7 +5,7 @@ NB. then took partial der. w/ respect to B_1:
 NB. 	got (+/(x_i*y_i) - 1%n(+/y_i*+/x_i))%(+/x_i^2 - 1%n*(+/x_i)^2
 NB.       cov(x,y) will calculate the numerator
 NB.       var(x) will calculate the denominator
-NB. formula is based off https://stats.stackexchange.com/questions/133554/least-squares-calculus-to-find-residual-minimizers
+
 
 NB. (+/(x_i*y_i) - 1%n(+/y_i*+/x_i)
 NB. 
