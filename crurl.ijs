@@ -1,11 +1,8 @@
-
-
 url=: monad define
 NB. **only required parameter is series id, can be found when searching through the FRED series database (typically next to name of series)
 NB. default param definitions
 NB. additional options for parameters can be found at https://fred.stlouisfed.org/docs/api/fred/series_observations.html   PS. Realtime is always default
 
-ftype=:'json'
 obsstart=:'1776-07-04'
 obsend=:'9999-12-31'
 limit=:'100000'
@@ -19,39 +16,31 @@ NB. series id
 if. 1=#y
   do.
     id=: y
-NB. series id, file type
-elseif. 2=#y
-  do.
-    id=: >0{y
-    ftype=:>1{y
 NB. series, file type, start, end
-elseif. 4=#y
+elseif. 3=#y
   do.
     id=: >0{y
-    ftype=: >1{y
-    obsstart=: >2{y
-    obsend=: >3{y
+    obsstart=: >1{y
+    obsend=: >2{y
 elseif. 5=#y
   do.
     id=: >0{y
-    ftype=: >1{y
-    obsstart=: >2{y
-    obsend=: >3{y
-    freq=:>4{y
+    obsstart=: >1{y
+    obsend=: >2{y
+    freq=:>3{y
 NB. all are defined
 else.
   id=: >0{y
-  ftype=: >1{y
-  obsstart=: >2{y
-  obsend=: >3{y
-  limit=:>4{y
-  offset=:>5{y
-  sorto=:>6{y
-  units=:>7{y
+  obsstart=: >1{y
+  obsend=: >2{y
+  limit=:>3{y
+  offset=:>4{y
+  sorto=:>5{y
+  units=:>6{y
 NB. use try/catch to test if an error is thrown using the given frequency
-  freq=:>8{y
+  freq=:>7{y
 end.
 
-; 'https://api.stlouisfed.org/fred/series/observations?series_id=';id;'&api_key=';APIKEY;'&file_type=';ftype;'&observation_start=';obsstart;'&observation_end=';obsend;'&limit=';limit;'&offset=';offset;'&sort_order=';sorto;'&units=';units;'&frequency=';freq
+; 'https://api.stlouisfed.org/fred/series/observations?series_id=';id;'&api_key=';APIKEY;'&file_type=json&observation_start=';obsstart;'&observation_end=';obsend;'&limit=';limit;'&offset=';offset;'&sort_order=';sorto;'&units=';units;'&frequency=';freq
 )
  
